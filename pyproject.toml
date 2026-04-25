@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "code-knowledge"
+version = "0.1.0"
+description = "Code-only knowledge graph with vector search"
+requires-python = ">=3.11"
+authors = [{name = "code-knowledge contributors"}]
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+  "networkx>=3.0",
+  "tree-sitter>=0.23.0",
+  "tree-sitter-python",
+  "tree-sitter-javascript",
+  "tree-sitter-typescript",
+  "tree-sitter-go",
+  "tree-sitter-rust",
+  "tree-sitter-java",
+  "tree-sitter-c",
+  "tree-sitter-cpp",
+  "tree-sitter-ruby",
+  "tree-sitter-c-sharp",
+  "tree-sitter-kotlin",
+  "tree-sitter-scala",
+  "tree-sitter-php",
+  "tree-sitter-swift",
+  "tree-sitter-lua",
+  "tree-sitter-zig",
+  "tree-sitter-powershell",
+  "tree-sitter-elixir",
+  "tree-sitter-objc",
+  "tree-sitter-julia",
+  "tree-sitter-verilog",
+  "lancedb",
+  "sentence-transformers",
+]
+
+[project.optional-dependencies]
+leiden = ["graspologic ; python_version < '3.13'"]
+
+[project.scripts]
+code-knowledge = "app.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
