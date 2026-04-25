@@ -2,6 +2,13 @@
 
 Code-only knowledge graph with vector search. A simplified version of Graphify focused on analyzing codebases using tree-sitter AST extraction and LanceDB vector embeddings.
 
+## Disclaimer
+- This is [graphify clone](https://github.com/safishamsi/graphify)
+- Data structure is much more simplified than Graphify
+- Only ingests code
+- No other formats such as video is supported
+- You can use Semantic search
+
 ## Features
 
 - **Multi-language code analysis**: Supports 26+ languages via tree-sitter (Python, JavaScript, TypeScript, Go, Rust, Java, C/C++, Ruby, Scala, PHP, etc.)
